@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notebook App</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/preview.css">
+  <link rel="stylesheet" href="./css/filetree.css">
+
+  <!-- markdown parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" defer></script>
+
+  <!-- code styling -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+</head>
+<body>
+    <div id="toolbar">
+        <div id="toolbar-left">
+            <button id="collapse-file-tree">
+                <img src="./assets/icons/file-tree.png" id="icon">
+            </button>
+            <button id="open-folder-button">
+                <img src="./assets/icons/open.png" id="icon">
+            </button>
+        </div>
+        <div id="toolbar-right">
+            <button id="preview-button">
+                <img src="./assets/icons/preview.png" id="icon">
+            </button>
+        </div>
+    </div>
+    <div id="content">
+        <div id="file-tree">
+        </div>
+        <div class="resizer" id="file-tree-resizer"></div>
+        <textarea id="note-area"></textarea>
+        <div class="resizer" id="preview-resizer"></div>
+        <div id="preview-pane"></div>
+    </div>
+</body>
+<script src="./renderer/renderer.js"></script>
+<script src="./renderer/resizer.js"></script>
+</html>

@@ -1,0 +1,17 @@
+#file-tree {
+    width: var(--file-tree-width, 20%);
+    height: calc(100vh - 30px);
+    overflow-y: scroll;
+    background-color: var(--tone-color);
+    color: white;
+    padding: 1%;
+    transition: width 0.3s ease;
+    box-sizing: border-box;
+}
+
+#file-tree.collapsed {
+    min-width: 0%;
+    width: 0%;
+    opacity: 0;
+    padding: 0;
+}

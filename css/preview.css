@@ -1,0 +1,13 @@
+#preview-pane {
+    width: var(--preview-width, 40%);
+    overflow-y: scroll;
+    height: calc(100vh - 30px);
+    background-color: white;
+    transition: width 0.3s ease;
+    box-sizing: border-box;
+    padding: 1%;
+}
+
+#preview-pane.collapsed {
+    width: 0%;
+}

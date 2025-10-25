@@ -1,0 +1,67 @@
+:root {
+    --primary-bg-color: gray;
+    --tone-color: rgb(57, 57, 57);
+}
+
+body {
+    background-color: var(--primary-bg-color);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: monospace;
+}
+
+#toolbar {
+    display: flex;
+    height: 30px;
+    background-color: var(--tone-color);
+}
+
+#toolbar button {
+    background-color: var(--tone-color);
+    height: 100%;
+    border: none;
+}
+
+#toolbar button:hover {
+    background-color: rgb(77, 77, 77);
+    cursor: pointer;
+}
+
+#toolbar-right {
+    margin-left: auto;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    overflow: hidden;
+    background-color: var(--tone-color);
+}
+
+#note-area {
+    flex: 2;
+    overflow-y: auto;
+    width: 40%;
+    min-width: 20%;
+    height: calc(100vh - 30px);
+    /* padding: 10px; */
+    background-color: var(--primary-bg-color);
+    resize: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+#icon {
+    width: 2em;
+    filter: invert(100%);
+}
+
+.resizer {
+    width: 5px;
+    cursor: col-resize;
+    background-color: var(--tone-color);
+}
