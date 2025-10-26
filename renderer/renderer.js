@@ -98,3 +98,9 @@ openDirButton.addEventListener('click', async () => {
   }
   workingDir = dirPath;
 });
+
+let saveButton = document.getElementById('save-button');
+saveButton.addEventListener('click', async () => {
+    window.prompt = ('please enter file name', 'note.md');
+    await window.api.saveFile(workingDir + '/note.md', noteContent.value);
+});
